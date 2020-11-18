@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="557.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyProfileScreenController">
+   <children>
+      <Text fill="#f5e82f" layoutX="14.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Profile">
+         <font>
+            <Font name="Helvetica" size="26.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="69.0" fitWidth="70.0" layoutX="244.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/user-1633249_1280.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="productListView" layoutX="20.0" layoutY="216.0" prefHeight="270.0" prefWidth="140.0" />
+      <Label layoutX="34.0" layoutY="185.0" text="My Products" textFill="WHITE">
+         <font>
+            <Font name="Helvetica" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="AddProductButton" layoutX="20.0" layoutY="497.0" mnemonicParsing="false" onAction="#addProductButton" prefHeight="27.0" prefWidth="140.0" style="-fx-background-color: green;" text="Add Product" textFill="WHITE" />
+      <GridPane layoutX="163.0" layoutY="210.0" prefHeight="264.0" prefWidth="367.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="115.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="116.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="105.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.0" minWidth="10.0" prefWidth="31.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Product ID: " textFill="WHITE" />
+            <Label text="Product Name:" textFill="WHITE" GridPane.rowIndex="1" />
+            <Label text="Product Price:" textFill="WHITE" GridPane.rowIndex="2" />
+            <Label text="Product Description: " textFill="WHITE" GridPane.rowIndex="3" />
+            <Label prefHeight="17.0" prefWidth="108.0" text="Product Condition" textFill="WHITE" GridPane.rowIndex="4" />
+            <Label text="Product Type: " textFill="WHITE" GridPane.rowIndex="5" />
+            <TextField fx:id="prodIDTextField" editable="false" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" />
+            <TextField fx:id="ProdNameTextField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
+            <TextField fx:id="ProdPriceTextField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
+            <TextField fx:id="ProdDescriptionTextField" prefHeight="27.0" prefWidth="246.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
+            <TextField fx:id="ProdConditionTextField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="4" />
+            <TextField fx:id="ProdTypeTextField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="5" />
+            <Button fx:id="UpdateButton" mnemonicParsing="false" onAction="#updateProductButton" prefHeight="27.0" prefWidth="113.0" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Button fx:id="DeleteProductButton" mnemonicParsing="false" onAction="#deleteProductButton" prefHeight="27.0" prefWidth="165.0" style="-fx-background-color: red;" text="Make Unavailable" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.rowIndex="8" />
+            <Label text="Product Quantity: " textFill="WHITE" GridPane.rowIndex="6" />
+            <TextField fx:id="ProdQuantityTextField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="6" />
+            <Label text="Availability Status:" textFill="WHITE" GridPane.rowIndex="7" />
+            <TextField fx:id="ProdAvailabilityTextField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <Button fx:id="BackButton" layoutX="473.0" layoutY="21.0" mnemonicParsing="false" onAction="#ReturnScreen" prefHeight="27.0" prefWidth="70.0" text="Back" />
+      <Text fx:id="textNameField" fill="#f5e82f" layoutX="203.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="user" wrappingWidth="339.560546875">
+         <font>
+            <Font name="Helvetica" size="23.0" />
+         </font>
+      </Text>
+      <Text fill="#ddd728" layoutX="195.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Type: 1 = Books, 2 = Apparel, 3 = Dorm Decor, 4 = Electronics" wrappingWidth="354.22900390625">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#ddd728" layoutX="195.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availability Status: 1 = Available, 0 = Not Available " wrappingWidth="354.22900390625">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Button fx:id="invoicesButton" layoutX="473.0" layoutY="56.0" mnemonicParsing="false" onAction="#loadInvoices" prefHeight="27.0" prefWidth="70.0" text="Invoices" />
+      <Button fx:id="logOutButton" layoutX="473.0" layoutY="90.0" mnemonicParsing="false" onAction="#logOut" prefHeight="27.0" prefWidth="70.0" text="Log Out" />
+   </children>
+</Pane>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignInScreenController">
+   <children>
+      <AnchorPane layoutX="-11.0" layoutY="-1.0" prefHeight="409.0" prefWidth="612.0" style="-fx-background-color: Blue;">
+         <children>
+            <Label layoutX="31.0" layoutY="98.0" prefHeight="24.0" prefWidth="91.0" text="First Name:" textFill="#eeff00">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="136.0" prefHeight="24.0" prefWidth="91.0" text="Middle Init:" textFill="#eeff00">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="247.0" prefHeight="24.0" prefWidth="115.0" text="Organization:" textFill="#eeff00">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="173.0" prefHeight="24.0" prefWidth="91.0" text="Last Name:" textFill="#eeff00">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="FNameTextField" layoutX="139.0" layoutY="96.0" prefHeight="27.0" prefWidth="180.0" />
+            <TextField fx:id="MInitTextField" layoutX="139.0" layoutY="134.0" prefHeight="27.0" prefWidth="69.0" />
+            <TextField fx:id="LNameTextField" layoutX="138.0" layoutY="171.0" prefHeight="27.0" prefWidth="180.0" />
+            <TextField fx:id="OrganizationTextField" layoutX="137.0" layoutY="245.0" prefHeight="27.0" prefWidth="180.0" />
+            <Label layoutX="53.0" layoutY="210.0" prefHeight="24.0" prefWidth="69.0" text="Gender:" textFill="#eeff00">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="GenderTextField" layoutX="137.0" layoutY="208.0" prefHeight="27.0" prefWidth="69.0" />
+            <Label layoutX="324.0" layoutY="136.0" prefHeight="24.0" prefWidth="76.0" text="Address:" textFill="#eeff00">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="AddressTextField" layoutX="406.0" layoutY="135.0" prefHeight="59.0" prefWidth="194.0" />
+            <Label layoutX="324.0" layoutY="210.0" prefHeight="24.0" prefWidth="85.0" text="Zip Code:" textFill="#eeff00">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ZipCodeTextField" layoutX="409.0" layoutY="209.0" prefHeight="27.0" prefWidth="130.0" />
+            <Label layoutX="13.0" layoutY="284.0" prefHeight="24.0" prefWidth="124.0" text="Email Address:" textFill="#eeff00">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="EmailAddressTextField" layoutX="137.0" layoutY="284.0" prefHeight="27.0" prefWidth="200.0" />
+            <Label layoutX="324.0" layoutY="98.0" prefHeight="24.0" prefWidth="130.0" text="Phone Number:" textFill="#eeff00">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="PhoneNumberTextField" layoutX="454.0" layoutY="96.0" prefHeight="27.0" prefWidth="148.0" />
+            <Label layoutX="43.0" layoutY="324.0" prefHeight="24.0" prefWidth="91.0" text="Password:" textFill="#eeff00">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="PasswordTextField" layoutX="138.0" layoutY="323.0" prefHeight="27.0" prefWidth="200.0" />
+            <Button fx:id="RegisterButton" layoutX="484.0" layoutY="357.0" mnemonicParsing="false" onAction="#RegisterButtonPressed" prefHeight="27.0" prefWidth="109.0" text="Register" />
+            <Label fx:id="UserDetailLabel" layoutX="228.0" layoutY="32.0" prefHeight="34.0" prefWidth="156.0" text="User Details" textFill="#e5ff00">
+               <font>
+                  <Font name="System Bold Italic" size="28.0" />
+               </font>
+            </Label>
+            <Button fx:id="BackButton" layoutX="26.0" layoutY="19.0" mnemonicParsing="false" onAction="#BackButtonPressed" prefHeight="34.0" prefWidth="109.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

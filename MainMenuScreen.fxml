@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="600.0" style="-fx-background-color: Blue;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuScreenController">
+    <children>
+        <Label fx:id="WelcomeLabel" layoutX="235.0" layoutY="41.0" onMouseClicked="#WelcomeLabelClicked" text="Welcome" textAlignment="CENTER" textFill="#fffb00">
+            <font>
+                <Font name="Arial Bold Italic" size="35.0" />
+            </font>
+        </Label>
+        <Label layoutX="33.0" layoutY="153.0" text="Search Product" textFill="#eaff00">
+            <font>
+                <Font name="Arial Bold Italic" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="SearchProductBar" layoutX="157.0" layoutY="150.0" onInputMethodTextChanged="#SearchProductBarInput" prefHeight="26.0" prefWidth="319.0" />
+        <Button fx:id="MyProfileButton" layoutX="509.0" layoutY="14.0" mnemonicParsing="false" onAction="#MyProfileButtonPressed" prefHeight="27.0" prefWidth="77.0" text="My Profile" />
+        <Button fx:id="MyCartButton" layoutX="509.0" layoutY="49.0" mnemonicParsing="false" onAction="#MyCartButtonPressed" prefHeight="27.0" prefWidth="77.0" text="My Cart" />
+        <Button fx:id="ElectronicButton" layoutX="38.0" layoutY="101.0" mnemonicParsing="false" onAction="#ElectronicButtonPressed" prefHeight="27.0" prefWidth="129.0" text="Electronics" />
+        <Button fx:id="DormDecor" layoutX="167.0" layoutY="101.0" mnemonicParsing="false" onAction="#DormDecorButton" prefHeight="27.0" prefWidth="129.0" text="Dorm Decor" />
+        <Button fx:id="BookButton" layoutX="296.0" layoutY="101.0" mnemonicParsing="false" onAction="#BookButtonPressed" prefHeight="27.0" prefWidth="129.0" text="Books" />
+        <Button fx:id="ClothesButton" layoutX="425.0" layoutY="101.0" mnemonicParsing="false" onAction="#ClothesButtonPressed" prefHeight="27.0" prefWidth="129.0" text="Clothes" />
+      <TableView fx:id="tableView" layoutX="38.0" layoutY="189.0" prefHeight="285.0" prefWidth="524.0">
+        <columns>
+          <TableColumn fx:id="ProductIDColumn" prefWidth="100.0" text="Product ID" />
+          <TableColumn fx:id="ProductNameColumn" prefWidth="167.0" text="Product Name" />
+            <TableColumn fx:id="DescriptionColumn" prefWidth="145.7354736328125" text="Condition" />
+            <TableColumn fx:id="CostColumn" prefWidth="110.0" text="Cost" />
+        </columns>
+      </TableView>
+      <Button fx:id="SearchButton" layoutX="482.0" layoutY="150.0" mnemonicParsing="false" onAction="#SearchButtonPressed" prefHeight="27.0" prefWidth="77.0" text="Search" />
+      <Button fx:id="ViewDetailButton" layoutX="445.0" layoutY="483.0" mnemonicParsing="false" onAction="#ViewDetailButtonPressed" prefHeight="27.0" prefWidth="119.0" text="View Detail" />
+    </children>
+</AnchorPane>
